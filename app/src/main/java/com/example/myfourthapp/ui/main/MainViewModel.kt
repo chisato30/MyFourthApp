@@ -4,19 +4,20 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class MainViewModel : ViewModel() {
-   val message:MutableLiveData<String> by lazy {
+
+   val message: MutableLiveData<String> by lazy {
       MutableLiveData<String>()
    }
    
-   val message2:MutableLiveData<String> by lazy {
+   val message2: MutableLiveData<String> by lazy {
       MutableLiveData<String>()
    }
    
-   val count:MutableLiveData<Int> by lazy {
+   val count: MutableLiveData<Int> by lazy {
       MutableLiveData<Int>()
    }
 
-   val share_data:MutableLiveData<ShareData> by lazy {
+   val share_data: MutableLiveData<ShareData> by lazy {
       MutableLiveData<ShareData>()
    }
 
@@ -26,6 +27,7 @@ class MainViewModel : ViewModel() {
        count.value = 0
        share_data.value = ShareData
    }
+
    fun count() {
       count.value = count.value!! + 1
    }

@@ -3,6 +3,7 @@ package com.example.myfourthapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.myfourthapp.ui.main.MainFragment
+import com.example.myfourthapp.ui.main.SubFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,7 +12,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.main_activity)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.container, MainFragment.newInstance())
+                .add(R.id.linear_container, MainFragment.newInstance())
+                .add(R.id.linear_container, SubFragment.newInstance())
                 .commitNow()
         }
     }
